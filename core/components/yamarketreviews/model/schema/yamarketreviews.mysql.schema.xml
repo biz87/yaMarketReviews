@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="yamarketreviews" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="yamarketreviews"
+       version="1.1">
+
+    <object class="yaMarketReviewsShopReviews" table="yaMarketReviews_shopreviews" extends="xPDOSimpleObject">
+        <field key="shopid" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false"
+               default="0"/>
+        <field key="reviewid" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false"
+               default="0"/>
+        <field key="date" dbtype="date" phptype="date" null="true"/>
+
+        <field key="grade" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="agreeCount" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="disagreeCount" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+
+        <field key="author" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="text" dbtype="text" phptype="text" null="true" default=""/>
+        <field key="expired" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false"
+               default="0"/>
+
+    </object>
+
+    <object class="yaMarketReviewsProductReviews" table="yaMarketReviews_productreviews" extends="xPDOSimpleObject">
+        <field key="productid" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false"
+               default="0"/>
+        <field key="reviewid" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false"
+               default="0"/>
+        <field key="date" dbtype="date" phptype="date" null="true"/>
+
+        <field key="grade" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="agreeCount" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="disagreeCount" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+
+        <field key="author" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="text" dbtype="text" phptype="text" null="true" default=""/>
+        <field key="expired" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false"
+               default="0"/>
+
+    </object>
+
+</model>
